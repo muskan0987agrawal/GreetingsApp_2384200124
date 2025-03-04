@@ -1,0 +1,213 @@
+﻿2025-03-02 15:39:17.0198 | Info | User registered successfully: string 
+2025-03-02 15:39:17.0631 | Info | User registered in Business Layer: string 
+2025-03-03 10:35:19.8853 | Error | Error in RegisterUser: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 10:35:19.9286 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 10:35:19.9286 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 10:40:21.8505 | Error | Error in RegisterUser: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 10:40:21.8505 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 10:40:21.8505 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 10:54:15.4790 | Error | Error in RegisterUser: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 10:54:15.5028 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 10:54:15.5040 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 10:59:02.8535 | Info | User registered successfully: string 
+2025-03-03 10:59:02.8815 | Info | User registered in Business Layer: string 
+2025-03-03 10:59:44.1000 | Info | User registered successfully: string 
+2025-03-03 10:59:44.1000 | Info | User registered in Business Layer: string 
+2025-03-03 11:01:23.2818 | Error | Error in RegisterUser: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 11:01:23.2818 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 11:01:23.2818 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 11:01:30.0168 | Error | Error in RegisterUser: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 11:01:30.0220 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 11:01:30.0220 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 11:09:13.1968 | Info | User registered successfully: string 
+2025-03-03 11:09:13.2262 | Info | User registered in Business Layer: string 
+2025-03-03 11:21:18.9729 | Info | User registered successfully: string 
+2025-03-03 11:21:19.0503 | Info | User registered in Business Layer: string 
+2025-03-03 11:21:49.2517 | Error | Error in RegisterUser: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 11:21:49.3126 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 11:21:49.3645 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
+2025-03-03 11:24:41.5116 | Info | User registered successfully: sadfgd 
+2025-03-03 11:24:41.5116 | Info | User registered in Business Layer: sadfgd 
+2025-03-03 11:45:34.0183 | Info | Application is starting... 
+2025-03-03 11:45:34.6987 | Info | Application is running... 
+2025-03-03 11:45:34.8656 | Info | Now listening on: https://localhost:7038 
+2025-03-03 11:45:34.8656 | Info | Now listening on: http://localhost:5199 
+2025-03-03 11:45:34.9388 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-03 11:45:34.9388 | Info | Hosting environment: Development 
+2025-03-03 11:45:34.9388 | Info | Content root path: C:\Users\91870\source\repos\UserResgistration1\ 
+2025-03-03 11:45:35.8703 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/index.html - - 
+2025-03-03 11:45:36.1859 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/index.html - - - 200 - text/html;charset=utf-8 320.6208ms 
+2025-03-03 11:45:36.2011 | Info | Request starting HTTP/2 GET https://localhost:7038/_vs/browserLink - - 
+2025-03-03 11:45:36.2011 | Info | Request starting HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-03 11:45:36.2011 | Info | Request finished HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 5.1634ms 
+2025-03-03 11:45:36.2726 | Info | Request finished HTTP/2 GET https://localhost:7038/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 71.4612ms 
+2025-03-03 11:45:36.3773 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - 
+2025-03-03 11:45:36.3825 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.0956ms 
+2025-03-03 11:46:52.8226 | Info | Request starting HTTP/2 POST https://localhost:7038/UserRegistration/register application/json 115 
+2025-03-03 11:46:52.8226 | Info | Executing endpoint 'UserResgistration1.Controllers.UserRegistrationController.Register (UserResgistration1)' 
+2025-03-03 11:46:52.8634 | Info | Route matched with {action = "Register", controller = "UserRegistration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(RepositoryLayer1.Entity.UserEntity) on controller UserResgistration1.Controllers.UserRegistrationController (UserResgistration1). 
+2025-03-03 11:46:54.0788 | Info | Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-03 11:46:54.9553 | Info | Executed DbCommand (74ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [FirstName], [LastName], [Password])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity(); 
+2025-03-03 11:46:55.0417 | Info | User registered successfully: aashutosh@gmail.com 
+2025-03-03 11:46:55.0417 | Info | User registered in Business Layer: aashutosh@gmail.com 
+2025-03-03 11:46:55.0417 | Info | Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-03 11:46:55.0567 | Info | Executed action UserResgistration1.Controllers.UserRegistrationController.Register (UserResgistration1) in 2188.5222ms 
+2025-03-03 11:46:55.0567 | Info | Executed endpoint 'UserResgistration1.Controllers.UserRegistrationController.Register (UserResgistration1)' 
+2025-03-03 11:46:55.0567 | Info | Request finished HTTP/2 POST https://localhost:7038/UserRegistration/register application/json 115 - 200 - application/json;+charset=utf-8 2241.8959ms 
+2025-03-03 11:47:24.3650 | Info | Application is starting... 
+2025-03-03 11:47:25.0140 | Info | Application is running... 
+2025-03-03 11:47:25.1908 | Info | Now listening on: https://localhost:7038 
+2025-03-03 11:47:25.1991 | Info | Now listening on: http://localhost:5199 
+2025-03-03 11:47:25.2890 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-03 11:47:25.2890 | Info | Hosting environment: Development 
+2025-03-03 11:47:25.2890 | Info | Content root path: C:\Users\91870\source\repos\UserResgistration1\ 
+2025-03-03 11:47:25.3690 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/index.html - - 
+2025-03-03 11:47:25.6488 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/index.html - - - 200 - text/html;charset=utf-8 281.2942ms 
+2025-03-03 11:47:25.6488 | Info | Request starting HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-03 11:47:25.6488 | Info | Request starting HTTP/2 GET https://localhost:7038/_vs/browserLink - - 
+2025-03-03 11:47:25.6488 | Info | Request finished HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 7.3946ms 
+2025-03-03 11:47:25.7120 | Info | Request finished HTTP/2 GET https://localhost:7038/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.8122ms 
+2025-03-03 11:47:25.7717 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - 
+2025-03-03 11:47:25.7717 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.4558ms 
+2025-03-03 15:26:26.2829 | Info | Application is starting... 
+2025-03-03 15:26:26.5092 | Info | Application is running... 
+2025-03-03 15:26:26.7542 | Info | Now listening on: https://localhost:7038 
+2025-03-03 15:26:26.7542 | Info | Now listening on: http://localhost:5199 
+2025-03-03 15:26:26.8322 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-03 15:26:26.8322 | Info | Hosting environment: Development 
+2025-03-03 15:26:26.8322 | Info | Content root path: C:\Users\91870\source\repos\UserResgistration1\ 
+2025-03-03 15:26:28.5775 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/index.html - - 
+2025-03-03 15:26:28.9953 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/index.html - - - 200 - text/html;charset=utf-8 435.8183ms 
+2025-03-03 15:26:29.0822 | Info | Request starting HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-03 15:26:29.0895 | Info | Request finished HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 7.2508ms 
+2025-03-03 15:26:29.2015 | Info | Request starting HTTP/2 GET https://localhost:7038/_vs/browserLink - - 
+2025-03-03 15:26:29.2526 | Info | Request finished HTTP/2 GET https://localhost:7038/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.1484ms 
+2025-03-03 15:26:29.5481 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - 
+2025-03-03 15:26:29.5536 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.4502ms 
+2025-03-03 15:32:37.1746 | Info | Application is starting... 
+2025-03-03 15:32:37.3969 | Info | Application is running... 
+2025-03-03 15:32:37.5225 | Info | Now listening on: https://localhost:7038 
+2025-03-03 15:32:37.5225 | Info | Now listening on: http://localhost:5199 
+2025-03-03 15:32:37.5953 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-03 15:32:37.5953 | Info | Hosting environment: Development 
+2025-03-03 15:32:37.5953 | Info | Content root path: C:\Users\91870\source\repos\UserResgistration1\ 
+2025-03-03 15:32:41.6862 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/index.html - - 
+2025-03-03 15:32:41.9428 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/index.html - - - 200 - text/html;charset=utf-8 257.6777ms 
+2025-03-03 15:32:41.9664 | Info | Request starting HTTP/2 GET https://localhost:7038/_vs/browserLink - - 
+2025-03-03 15:32:41.9664 | Info | Request starting HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-03 15:32:41.9664 | Info | Request finished HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 5.2808ms 
+2025-03-03 15:32:42.0155 | Info | Request finished HTTP/2 GET https://localhost:7038/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.0385ms 
+2025-03-03 15:32:42.0534 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - 
+2025-03-03 15:32:42.0534 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.9459ms 
+2025-03-03 15:33:20.4450 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/index.html - - 
+2025-03-03 15:33:21.1257 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/index.html - - - 200 - text/html;charset=utf-8 680.6909ms 
+2025-03-03 15:33:23.1199 | Info | Request starting HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-03 15:33:23.1199 | Info | Request starting HTTP/2 GET https://localhost:7038/_vs/browserLink - - 
+2025-03-03 15:33:23.1199 | Info | Request finished HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 1.9070ms 
+2025-03-03 15:33:23.1477 | Info | Request finished HTTP/2 GET https://localhost:7038/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.7870ms 
+2025-03-03 15:33:23.2083 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - 
+2025-03-03 15:33:23.2083 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1.9237ms 
+2025-03-03 15:39:20.7190 | Info | Request starting HTTP/1.1 POST https://localhost:7038/swagger/index.html application/json 56 
+2025-03-03 15:39:20.8279 | Info | Request finished HTTP/1.1 POST https://localhost:7038/swagger/index.html application/json 56 - 404 0 - 110.0820ms 
+2025-03-03 15:39:23.2496 | Info | Request starting HTTP/1.1 POST https://localhost:7038/swagger/index.html application/json 56 
+2025-03-03 15:39:23.2496 | Info | Request finished HTTP/1.1 POST https://localhost:7038/swagger/index.html application/json 56 - 404 0 - 7.0730ms 
+2025-03-03 15:42:08.0655 | Info | Request starting HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 
+2025-03-03 15:42:08.0665 | Info | Request finished HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 - 404 0 - 1.0090ms 
+2025-03-03 15:42:12.3031 | Info | Request starting HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 
+2025-03-03 15:42:12.3031 | Info | Request finished HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 - 404 0 - 2.1187ms 
+2025-03-03 15:42:15.0708 | Info | Request starting HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 
+2025-03-03 15:42:15.0708 | Info | Request finished HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 - 404 0 - 0.6013ms 
+2025-03-03 15:42:16.6395 | Info | Request starting HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 
+2025-03-03 15:42:16.6395 | Info | Request finished HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 - 404 0 - 3.2161ms 
+2025-03-03 15:52:17.5740 | Info | Request starting HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 
+2025-03-03 15:52:17.6356 | Info | Request finished HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 - 404 0 - 62.5026ms 
+2025-03-03 15:52:19.5083 | Info | Request starting HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 
+2025-03-03 15:52:19.5083 | Info | Request finished HTTP/1.1 POST https://localhost:7038/swagger/index.html/register application/json 56 - 404 0 - 5.6129ms 
+2025-03-03 15:53:19.2743 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/index.html - - 
+2025-03-03 15:53:19.4690 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/index.html - - - 200 - text/html;charset=utf-8 194.6876ms 
+2025-03-03 15:53:19.6906 | Info | Request starting HTTP/2 GET https://localhost:7038/_vs/browserLink - - 
+2025-03-03 15:53:19.6929 | Info | Request starting HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-03 15:53:19.6929 | Info | Request finished HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 7.2171ms 
+2025-03-03 15:53:19.7334 | Info | Request finished HTTP/2 GET https://localhost:7038/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.8781ms 
+2025-03-03 15:53:20.0584 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - 
+2025-03-03 15:53:20.1513 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 92.9334ms 
+2025-03-03 15:53:58.0531 | Info | Request starting HTTP/2 POST https://localhost:7038/UserRegistration/register application/json 98 
+2025-03-03 15:53:58.0857 | Info | Executing endpoint 'UserResgistration1.Controllers.UserRegistrationController.Register (UserResgistration1)' 
+2025-03-03 15:53:58.2246 | Info | Route matched with {action = "Register", controller = "UserRegistration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer1.DTO.RegisterDTO) on controller UserResgistration1.Controllers.UserRegistrationController (UserResgistration1). 
+2025-03-03 15:53:59.5773 | Info | Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-03 15:54:01.0709 | Info | Executed DbCommand (233ms) [Parameters=[@__userDTO_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDTO_Email_0 
+2025-03-03 15:54:01.3098 | Info | Executed DbCommand (52ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [FirstName], [LastName], [Password])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity(); 
+2025-03-03 15:54:01.3709 | Info | User registered successfully: string@ 
+2025-03-03 15:54:01.3709 | Info | User registered successfully in Business Layer: string@ 
+2025-03-03 15:54:01.3793 | Info | Executing OkObjectResult, writing value of type 'ModelLayer1.DTO.ResponseDTO`1[[ModelLayer1.DTO.RegisterResponse, ModelLayer1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2025-03-03 15:54:01.3793 | Info | Executed action UserResgistration1.Controllers.UserRegistrationController.Register (UserResgistration1) in 3159.6661ms 
+2025-03-03 15:54:01.3793 | Info | Executed endpoint 'UserResgistration1.Controllers.UserRegistrationController.Register (UserResgistration1)' 
+2025-03-03 15:54:01.3959 | Info | Request finished HTTP/2 POST https://localhost:7038/UserRegistration/register application/json 98 - 200 - application/json;+charset=utf-8 3342.8133ms 
+2025-03-03 17:18:37.3042 | Info | Application is starting... 
+2025-03-03 17:18:39.4626 | Info | Application is running... 
+2025-03-03 17:18:44.6967 | Info | Now listening on: https://localhost:7038 
+2025-03-03 17:18:44.8943 | Info | Now listening on: http://localhost:5199 
+2025-03-03 17:18:46.3161 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-03 17:18:46.4372 | Info | Hosting environment: Development 
+2025-03-03 17:18:46.5204 | Info | Content root path: C:\Users\91870\source\repos\UserResgistration1\ 
+2025-03-03 17:18:49.7736 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/index.html - - 
+2025-03-03 17:18:52.5215 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/index.html - - - 200 - text/html;charset=utf-8 2826.9050ms 
+2025-03-03 17:18:52.7803 | Info | Request starting HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-03 17:18:52.7938 | Info | Request starting HTTP/2 GET https://localhost:7038/_vs/browserLink - - 
+2025-03-03 17:18:52.8189 | Info | Request finished HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 38.5255ms 
+2025-03-03 17:18:53.0519 | Info | Request finished HTTP/2 GET https://localhost:7038/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 258.1419ms 
+2025-03-03 17:18:53.8091 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - 
+2025-03-03 17:18:53.8642 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 55.1326ms 
+2025-03-03 17:20:22.0315 | Info | Application is starting... 
+2025-03-03 17:20:23.1241 | Info | Application is running... 
+2025-03-03 17:20:23.5888 | Info | Now listening on: https://localhost:7038 
+2025-03-03 17:20:23.6027 | Info | Now listening on: http://localhost:5199 
+2025-03-03 17:20:23.6959 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-03 17:20:23.6959 | Info | Hosting environment: Development 
+2025-03-03 17:20:23.6959 | Info | Content root path: C:\Users\91870\source\repos\UserResgistration1\ 
+2025-03-03 17:20:24.5719 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/index.html - - 
+2025-03-03 17:20:25.1301 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/index.html - - - 200 - text/html;charset=utf-8 563.2925ms 
+2025-03-03 17:20:25.1617 | Info | Request starting HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-03 17:20:25.1617 | Info | Request starting HTTP/2 GET https://localhost:7038/_vs/browserLink - - 
+2025-03-03 17:20:25.1617 | Info | Request finished HTTP/2 GET https://localhost:7038/_framework/aspnetcore-browser-refresh.js - - - 200 12368 application/javascript;+charset=utf-8 10.4333ms 
+2025-03-03 17:20:25.2553 | Info | Request finished HTTP/2 GET https://localhost:7038/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 89.6097ms 
+2025-03-03 17:20:25.5190 | Info | Request starting HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - 
+2025-03-03 17:20:25.5253 | Info | Request finished HTTP/2 GET https://localhost:7038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 6.2791ms 
+2025-03-03 17:20:39.3818 | Info | Request starting HTTP/2 POST https://localhost:7038/UserRegistration/register application/json 94 
+2025-03-03 17:20:39.3954 | Info | Executing endpoint 'UserResgistration1.Controllers.UserRegistrationController.Register (UserResgistration1)' 
+2025-03-03 17:20:39.4655 | Info | Route matched with {action = "Register", controller = "UserRegistration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer1.DTO.RegisterDTO) on controller UserResgistration1.Controllers.UserRegistrationController (UserResgistration1). 
+2025-03-03 17:20:40.9962 | Info | Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-03 17:20:43.2709 | Info | Executed DbCommand (232ms) [Parameters=[@__userDTO_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDTO_Email_0 
+2025-03-03 17:20:43.4287 | Warn | User already exists with email: string 
+2025-03-03 17:20:43.4287 | Info | User registered successfully in Business Layer: string 
+2025-03-03 17:20:43.4287 | Info | Executing OkObjectResult, writing value of type 'ModelLayer1.DTO.RegisterResponse'. 
+2025-03-03 17:20:43.4478 | Info | Executed action UserResgistration1.Controllers.UserRegistrationController.Register (UserResgistration1) in 3973.7689ms 
+2025-03-03 17:20:43.4478 | Info | Executed endpoint 'UserResgistration1.Controllers.UserRegistrationController.Register (UserResgistration1)' 
+2025-03-03 17:20:43.4478 | Info | Request finished HTTP/2 POST https://localhost:7038/UserRegistration/register application/json 94 - 200 - application/json;+charset=utf-8 4073.1073ms 
+2025-03-03 20:40:46.4802 | Info | Get Method Executed 
+2025-03-03 20:49:02.1030 | Info | Get Method Executed 
+2025-03-03 20:50:43.7461 | Info | Get Method Executed 
+2025-03-03 21:32:23.5001 | Info | Get Method Executed 
+2025-03-03 21:34:39.7718 | Info | Post Method Executed 
+2025-03-03 21:36:06.5747 | Info | Post Method Executed 
+2025-03-03 21:36:18.6671 | Info | Put Method Executed 
+2025-03-03 21:36:35.8542 | Info | Patch Method Executed 
+2025-03-03 21:36:43.4044 | Info | Detele Method Executed 
