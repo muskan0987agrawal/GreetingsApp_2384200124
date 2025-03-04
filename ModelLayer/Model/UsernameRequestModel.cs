@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ModelLayer.Model
 {
-   public class RequestModel
+    public class UsernameRequestModel
     {
-        public  string Key {  get; set; }
-        public string Value {  get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
     }
 }

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace RepositoryLayer.Service
 {
-    public class GreetingRL:IGreetingRL
+    public class GreetingRL : IGreetingRL
     {
-
+       
     }
 }

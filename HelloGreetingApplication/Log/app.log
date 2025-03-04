@@ -1,4 +1,4 @@
-﻿2025-03-02 15:39:17.0198 | Info | User registered successfully: string 
+2025-03-02 15:39:17.0198 | Info | User registered successfully: string 
 2025-03-02 15:39:17.0631 | Info | User registered in Business Layer: string 
 2025-03-03 10:35:19.8853 | Error | Error in RegisterUser: An error occurred while saving the entity changes. See the inner exception for details. 
 2025-03-03 10:35:19.9286 | Error | Error in Register: An error occurred while saving the entity changes. See the inner exception for details. 
@@ -211,3 +211,105 @@ WHERE [u].[Email] = @__userDTO_Email_0
 2025-03-03 21:36:18.6671 | Info | Put Method Executed 
 2025-03-03 21:36:35.8542 | Info | Patch Method Executed 
 2025-03-03 21:36:43.4044 | Info | Detele Method Executed 
+2025-03-04 11:23:27.4375 | Info | Application is starting... 
+2025-03-04 11:23:28.4998 | Info | Now listening on: https://localhost:7240 
+2025-03-04 11:23:28.5111 | Info | Now listening on: http://localhost:5084 
+2025-03-04 11:23:28.5822 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-04 11:23:28.5898 | Info | Hosting environment: Development 
+2025-03-04 11:23:28.5998 | Info | Content root path: M:\C#PRoject\GreetingApp\HelloGreetingApplication\HelloGreetingApplication\ 
+2025-03-04 11:23:29.1772 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/index.html - - 
+2025-03-04 11:23:29.7586 | Info | Request starting HTTP/2 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-04 11:23:29.7586 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/index.js - - 
+2025-03-04 11:23:29.7586 | Info | Request starting HTTP/2 GET https://localhost:7240/_vs/browserLink - - 
+2025-03-04 11:23:29.7586 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/index.html - - - 200 - text/html;charset=utf-8 586.1583ms 
+2025-03-04 11:23:29.7586 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 6.6162ms 
+2025-03-04 11:23:29.7756 | Info | Request finished HTTP/2 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 16.9885ms 
+2025-03-04 11:23:29.9375 | Info | Request finished HTTP/2 GET https://localhost:7240/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 178.5111ms 
+2025-03-04 11:23:29.9853 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/v1/swagger.json - - 
+2025-03-04 11:23:29.9936 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.2708ms 
+2025-03-04 11:23:39.5097 | Info | Request starting HTTP/2 GET https://localhost:7240/HelloGreeting/greet - - 
+2025-03-04 11:23:39.5240 | Info | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.get (HelloGreetingApplication)' 
+2025-03-04 11:23:39.5436 | Info | Route matched with {action = "get", controller = "HelloGreeting"}. Executing controller action with signature System.String get() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 11:23:39.5436 | Info | Hello 
+2025-03-04 11:23:39.5603 | Info | Executing ObjectResult, writing value of type 'System.String'. 
+2025-03-04 11:23:39.5603 | Info | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.get (HelloGreetingApplication) in 17.1186ms 
+2025-03-04 11:23:39.5603 | Info | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.get (HelloGreetingApplication)' 
+2025-03-04 11:23:39.5603 | Info | Request finished HTTP/2 GET https://localhost:7240/HelloGreeting/greet - - - 200 - text/plain;+charset=utf-8 57.7213ms 
+2025-03-04 11:23:40.8109 | Info | Request starting HTTP/2 GET https://localhost:7240/HelloGreeting/greet - - 
+2025-03-04 11:23:40.8109 | Info | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.get (HelloGreetingApplication)' 
+2025-03-04 11:23:40.8109 | Info | Route matched with {action = "get", controller = "HelloGreeting"}. Executing controller action with signature System.String get() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 11:23:40.8109 | Info | Hello 
+2025-03-04 11:23:40.8109 | Info | Executing ObjectResult, writing value of type 'System.String'. 
+2025-03-04 11:23:40.8109 | Info | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.get (HelloGreetingApplication) in 0.8855ms 
+2025-03-04 11:23:40.8109 | Info | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.get (HelloGreetingApplication)' 
+2025-03-04 11:23:40.8188 | Info | Request finished HTTP/2 GET https://localhost:7240/HelloGreeting/greet - - - 200 - text/plain;+charset=utf-8 7.9817ms 
+2025-03-04 14:44:19.5328 | Info | Application is starting... 
+2025-03-04 14:44:21.7683 | Info | Now listening on: https://localhost:7240 
+2025-03-04 14:44:21.7783 | Info | Now listening on: http://localhost:5084 
+2025-03-04 14:44:21.8529 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-04 14:44:21.8529 | Info | Hosting environment: Development 
+2025-03-04 14:44:21.8529 | Info | Content root path: M:\C#PRoject\GreetingApp\HelloGreetingApplication\HelloGreetingApplication\ 
+2025-03-04 14:44:23.2818 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/index.html - - 
+2025-03-04 14:44:23.8203 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/index.html - - - 200 - text/html;charset=utf-8 541.4845ms 
+2025-03-04 14:44:23.8849 | Info | Request starting HTTP/2 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-04 14:44:23.8849 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/index.js - - 
+2025-03-04 14:44:23.8849 | Info | Request starting HTTP/2 GET https://localhost:7240/_vs/browserLink - - 
+2025-03-04 14:44:23.8849 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 3.6496ms 
+2025-03-04 14:44:23.9013 | Info | Request finished HTTP/2 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 16.4224ms 
+2025-03-04 14:44:23.9947 | Info | Request finished HTTP/2 GET https://localhost:7240/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 109.6810ms 
+2025-03-04 14:44:24.0574 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/v1/swagger.json - - 
+2025-03-04 14:44:24.1120 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 54.6687ms 
+2025-03-04 15:02:01.3814 | Info | Application is starting... 
+2025-03-04 15:02:02.9695 | Info | Now listening on: https://localhost:7240 
+2025-03-04 15:02:02.9813 | Info | Now listening on: http://localhost:5084 
+2025-03-04 15:02:03.0515 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-04 15:02:03.0541 | Info | Hosting environment: Development 
+2025-03-04 15:02:03.0541 | Info | Content root path: M:\C#PRoject\GreetingApp\HelloGreetingApplication\HelloGreetingApplication\ 
+2025-03-04 15:02:04.0909 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/index.html - - 
+2025-03-04 15:02:04.6079 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/index.html - - - 200 - text/html;charset=utf-8 520.3514ms 
+2025-03-04 15:02:04.6990 | Info | Request starting HTTP/2 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-04 15:02:04.6990 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/index.js - - 
+2025-03-04 15:02:04.6990 | Info | Request starting HTTP/2 GET https://localhost:7240/_vs/browserLink - - 
+2025-03-04 15:02:04.7102 | Info | Request finished HTTP/2 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 11.0652ms 
+2025-03-04 15:02:04.7102 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.8248ms 
+2025-03-04 15:02:04.9589 | Info | Request finished HTTP/2 GET https://localhost:7240/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 258.0328ms 
+2025-03-04 15:02:05.1592 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/v1/swagger.json - - 
+2025-03-04 15:02:05.1901 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 30.9046ms 
+2025-03-04 15:02:19.9430 | Info | Request starting HTTP/2 POST https://localhost:7240/HelloGreeting/GetUserName application/json 51 
+2025-03-04 15:02:19.9430 | Info | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication)' 
+2025-03-04 15:02:20.0113 | Info | Route matched with {action = "PostUserName", controller = "HelloGreeting"}. Executing controller action with signature System.String PostUserName(ModelLayer.Model.UsernameRequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 15:02:20.0992 | Info | Executing ObjectResult, writing value of type 'System.String'. 
+2025-03-04 15:02:20.0992 | Info | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication) in 89.1232ms 
+2025-03-04 15:02:20.0992 | Info | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication)' 
+2025-03-04 15:02:20.0992 | Info | Request finished HTTP/2 POST https://localhost:7240/HelloGreeting/GetUserName application/json 51 - 200 - text/plain;+charset=utf-8 168.2778ms 
+2025-03-04 15:02:30.8379 | Info | Request starting HTTP/2 POST https://localhost:7240/HelloGreeting/GetUserName application/json 39 
+2025-03-04 15:02:30.8379 | Info | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication)' 
+2025-03-04 15:02:30.8379 | Info | Route matched with {action = "PostUserName", controller = "HelloGreeting"}. Executing controller action with signature System.String PostUserName(ModelLayer.Model.UsernameRequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 15:02:30.8379 | Info | Executing ObjectResult, writing value of type 'System.String'. 
+2025-03-04 15:02:30.8379 | Info | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication) in 5.4111ms 
+2025-03-04 15:02:30.8379 | Info | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication)' 
+2025-03-04 15:02:30.8379 | Info | Request finished HTTP/2 POST https://localhost:7240/HelloGreeting/GetUserName application/json 39 - 200 - text/plain;+charset=utf-8 9.1423ms 
+2025-03-04 15:13:05.6623 | Info | Application is starting... 
+2025-03-04 15:13:07.1764 | Info | Now listening on: https://localhost:7240 
+2025-03-04 15:13:07.1864 | Info | Now listening on: http://localhost:5084 
+2025-03-04 15:13:07.2515 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-04 15:13:07.2515 | Info | Hosting environment: Development 
+2025-03-04 15:13:07.2515 | Info | Content root path: M:\C#PRoject\GreetingApp\HelloGreetingApplication\HelloGreetingApplication\ 
+2025-03-04 15:13:08.2547 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/index.html - - 
+2025-03-04 15:13:08.7123 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/index.html - - - 200 - text/html;charset=utf-8 460.6133ms 
+2025-03-04 15:13:08.7990 | Info | Request starting HTTP/2 GET https://localhost:7240/_vs/browserLink - - 
+2025-03-04 15:13:08.7990 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/index.js - - 
+2025-03-04 15:13:08.7990 | Info | Request starting HTTP/2 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-04 15:13:08.8048 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 5.7017ms 
+2025-03-04 15:13:08.8048 | Info | Request finished HTTP/2 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 12.7086ms 
+2025-03-04 15:13:09.0601 | Info | Request finished HTTP/2 GET https://localhost:7240/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 260.8750ms 
+2025-03-04 15:13:09.2267 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/v1/swagger.json - - 
+2025-03-04 15:13:09.2657 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 39.0015ms 
+2025-03-04 15:13:19.8103 | Info | Request starting HTTP/2 POST https://localhost:7240/HelloGreeting/GetUserName application/json 51 
+2025-03-04 15:13:19.8251 | Info | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication)' 
+2025-03-04 15:13:19.8701 | Info | Route matched with {action = "PostUserName", controller = "HelloGreeting"}. Executing controller action with signature System.String PostUserName(ModelLayer.Model.UsernameRequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 15:13:19.9481 | Info | POST /GetUserName method executed 
+2025-03-04 15:13:19.9634 | Info | Executing ObjectResult, writing value of type 'System.String'. 
+2025-03-04 15:13:19.9796 | Info | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication) in 94.3683ms 
+2025-03-04 15:13:19.9796 | Info | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication)' 
+2025-03-04 15:13:19.9796 | Info | Request finished HTTP/2 POST https://localhost:7240/HelloGreeting/GetUserName application/json 51 - 200 - text/plain;+charset=utf-8 170.4183ms 

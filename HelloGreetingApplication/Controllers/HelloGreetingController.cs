@@ -6,23 +6,51 @@ using NLog;
 
 namespace HelloGreetingApplication.Controllers
 {
-
     /// <summary>
-    /// Class Providing API for HelloGreeting
+    ///  Class providing API for HelloGreeting
     /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class HelloGreetingController : ControllerBase
     {
-        
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private readonly IGreetingBL _greetingBL;
+        private readonly UsernameRequestModel _usernameRequestModel;
 
         public HelloGreetingController(IGreetingBL greetingBL) // Use the interface
         {
             _greetingBL = greetingBL;
         }
 
+
+
+        /// <summary>
+        /// Get greeting message
+        /// </summary>
+        [HttpGet("greet")]
+        public string get()
+        {
+            _logger.Info("GET /greet method executed");
+            return _greetingBL.getGreetMessage();
+        }
+        /// <summary>
+        /// Creates a personalized greeting based on provided user attributes
+        /// </summary>
+        /// <param name="request"> The RequestModel containing optional first Name and Last Name</param>
+        /// <returns> A ResponseModel with a personalized greeting and creation timsestam</returns>
+        [HttpPost("PostUserName")]
+        public IActionResult PostUserName(UsernameRequestModel request)
+        {
+            _logger.Info("POST /GetUserName method executed");
+            var result= _greetingBL.GetGreetingMessage(request);
+            var response = new ResponseModel<object>
+            {
+                Success = true,
+                Message = "Greeting created",
+                Data = result
+            };
+            return Ok(response);
+        }
 
         /// <summary>
         /// Get a welcome message
@@ -102,12 +130,6 @@ namespace HelloGreetingApplication.Controllers
             responseModel.Message = "Data deleted Successfully";
             responseModel.Data = $"Deleted key: {requestModel.Key}";
             return Ok(responseModel);
-        }
-
-        [HttpGet("greet")]
-        public string get()
-        {
-           return _greetingBL.getGreetMessage();
         }
     }
 }
