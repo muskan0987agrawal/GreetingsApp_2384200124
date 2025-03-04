@@ -5,15 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessLayer.Interface;
 using ModelLayer.Model;
+using RepositoryLayer.Entity;
+using RepositoryLayer.Interface;
+using RepositoryLayer.Service;
 
 namespace BusinessLayer.Service
 {
     public class GreetingBL: IGreetingBL
     {
-        public GreetingBL()
+        private readonly IGreetingRL _greetingRL;
+     
+
+        public GreetingBL(IGreetingRL greetingRL)
         {
-            
+            _greetingRL = greetingRL;
         }
+        //UC3
         public string getGreetMessage()
         {
             return "Hello World";
@@ -35,5 +42,13 @@ namespace BusinessLayer.Service
             }
             return "Hello World!";
         }
+
+        //UC4
+        public Greeting AddGreeting(Greeting greeting)
+        {
+            return _greetingRL.AddGreetings(greeting);
+        }
+
+       
     }
 }

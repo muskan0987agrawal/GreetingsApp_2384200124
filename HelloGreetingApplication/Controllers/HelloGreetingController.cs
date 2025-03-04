@@ -3,6 +3,7 @@ using BusinessLayer.Service;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
 using NLog;
+using RepositoryLayer.Entity;
 
 namespace HelloGreetingApplication.Controllers
 {
@@ -22,8 +23,6 @@ namespace HelloGreetingApplication.Controllers
             _greetingBL = greetingBL;
         }
 
-
-
         /// <summary>
         /// Get greeting message
         /// </summary>
@@ -33,12 +32,13 @@ namespace HelloGreetingApplication.Controllers
             _logger.Info("GET /greet method executed");
             return _greetingBL.getGreetMessage();
         }
+
         /// <summary>
         /// Creates a personalized greeting based on provided user attributes
         /// </summary>
         /// <param name="request"> The RequestModel containing optional first Name and Last Name</param>
         /// <returns> A ResponseModel with a personalized greeting and creation timsestam</returns>
-        [HttpPost("PostUserName")]
+        [HttpPost("UC3/PostUserName")]
         public IActionResult PostUserName(UsernameRequestModel request)
         {
             _logger.Info("POST /GetUserName method executed");
@@ -50,6 +50,32 @@ namespace HelloGreetingApplication.Controllers
                 Data = result
             };
             return Ok(response);
+        }
+
+        /// <summary>
+        /// Handles the creation of a new greeting message.
+        /// </summary>
+        /// <param name="requestModel">The request containing the greeting message.</param>
+        /// <returns>Returns a success response if the greeting is saved, or an error response if the input is invalid.</returns>
+        [HttpPost("UC4")]
+        public IActionResult SendGreeting(RequestModel requestModel)
+        {
+            ResponseModel<String> responseModel = new ResponseModel<string>();
+
+            if (requestModel == null || string.IsNullOrWhiteSpace(requestModel.Value))
+            {
+                return BadRequest(new { Success = false, Message = "Invalid input. Message cannot be empty." });
+            }
+
+            var greeting = new Greeting { Message = requestModel.Value };
+            var savedGreeting = _greetingBL.AddGreeting(greeting);
+
+
+            responseModel.Success = true;
+            responseModel.Message = "Greeting saved successfully.";
+            responseModel.Data = savedGreeting.Message;
+            _logger.Info("SendGreeting Method Executed Successfully");
+            return Ok(responseModel);
         }
 
         /// <summary>

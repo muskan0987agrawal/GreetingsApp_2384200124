@@ -4,6 +4,8 @@ using BusinessLayer.Interface;
 using BusinessLayer.Service;
 using RepositoryLayer.Service;
 using RepositoryLayer.Interface;
+using Microsoft.EntityFrameworkCore;
+using RepositoryLayer.Context;
 
 var logger = LogManager.Setup().LoadConfigurationFromFile("NLog.config").GetCurrentClassLogger();
 
@@ -20,7 +22,13 @@ try
     // Add services to the container
     builder.Services.AddControllers();
     builder.Services.AddScoped<IGreetingBL, GreetingBL>();
-   
+    builder.Services.AddScoped<IGreetingRL, GreetingRL>();
+
+    //builder.Services.AddDbContext<GreetingDbContext>(options =>
+    //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+    var connectionString = builder.Configuration.GetConnectionString("sqlConnection");
+    builder.Services.AddDbContext<GreetingDbContext>(options => options.UseSqlServer(connectionString));
     // Swagger Configuration
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
