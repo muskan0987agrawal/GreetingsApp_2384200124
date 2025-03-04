@@ -6,17 +6,24 @@ using NLog;
 
 namespace HelloGreetingApplication.Controllers
 {
+
     /// <summary>
-    ///  Class providing API for HelloGreeting
+    /// Class Providing API for HelloGreeting
     /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class HelloGreetingController : ControllerBase
     {
+        
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private readonly IGreetingBL _greetingBL;
-      
-      
+
+        public HelloGreetingController(IGreetingBL greetingBL) // Use the interface
+        {
+            _greetingBL = greetingBL;
+        }
+
+
         /// <summary>
         /// Get a welcome message
         /// </summary>
@@ -95,6 +102,12 @@ namespace HelloGreetingApplication.Controllers
             responseModel.Message = "Data deleted Successfully";
             responseModel.Data = $"Deleted key: {requestModel.Key}";
             return Ok(responseModel);
+        }
+
+        [HttpGet("greet")]
+        public string get()
+        {
+           return _greetingBL.getGreetMessage();
         }
     }
 }
