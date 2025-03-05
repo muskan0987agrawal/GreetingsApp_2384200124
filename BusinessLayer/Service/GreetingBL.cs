@@ -20,12 +20,13 @@ namespace BusinessLayer.Service
         {
             _greetingRL = greetingRL;
         }
-        //UC3
+        //UC2
         public string getGreetMessage()
         {
             return "Hello World";
         }
 
+        //UC3
         public string GetGreetingMessage(UsernameRequestModel request)
         {
             if (!string.IsNullOrWhiteSpace(request.FirstName) && !string.IsNullOrWhiteSpace(request.LastName))
@@ -49,6 +50,12 @@ namespace BusinessLayer.Service
             return _greetingRL.AddGreetings(greeting);
         }
 
-       
+        //UC5
+        public Greeting? GetGreetingById(int id)
+        {
+            return _greetingRL.GetGreetingById(id);
+        }
+
+
     }
 }

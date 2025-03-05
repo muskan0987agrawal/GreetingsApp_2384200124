@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
 using NLog;
 using RepositoryLayer.Entity;
+using RepositoryLayer.Service;
 
 namespace HelloGreetingApplication.Controllers
 {
@@ -58,25 +59,78 @@ namespace HelloGreetingApplication.Controllers
         /// <param name="requestModel">The request containing the greeting message.</param>
         /// <returns>Returns a success response if the greeting is saved, or an error response if the input is invalid.</returns>
         [HttpPost("UC4")]
-        public IActionResult SendGreeting(RequestModel requestModel)
+        public IActionResult SendGreeting(PostGreetingRequest postgreetingrequest)
         {
-            ResponseModel<String> responseModel = new ResponseModel<string>();
+            _logger.Info("SendGreeting method started."); // Method start log
 
-            if (requestModel == null || string.IsNullOrWhiteSpace(requestModel.Value))
+            ResponseModel<string> responseModel = new ResponseModel<string>();
+
+            try
             {
-                return BadRequest(new { Success = false, Message = "Invalid input. Message cannot be empty." });
+                if (postgreetingrequest == null || string.IsNullOrWhiteSpace(postgreetingrequest.Message))
+                {
+                    _logger.Warn("Invalid input received: Message is empty or null.");
+                    return BadRequest(new { Success = false, Message = "Invalid input. Message cannot be empty." });
+                }
+
+                var greeting = new Greeting { Message = postgreetingrequest.Message };
+                var savedGreeting = _greetingBL.AddGreeting(greeting);
+
+                responseModel.Success = true;
+                responseModel.Message = "Greeting saved successfully.";
+                responseModel.Data = savedGreeting.Message;
+
+                _logger.Info("Greeting saved successfully: " + savedGreeting.Message);
+                _logger.Info("SendGreeting method executed successfully.");
+
+                return Ok(responseModel);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Error occurred in SendGreeting method: " + ex.Message, ex);
+                return StatusCode(500, new { Success = false, Message = "An unexpected error occurred." });
+            }
+        }
+
+
+        //UC5
+        /// <summary>
+        /// Retrieves a greeting message by its unique identifier.
+        /// </summary>
+        /// <param name = "id" > The unique identifier of the greeting message.</param>
+        /// <returns>
+        /// Returns an HTTP 200 response with the greeting message if found.
+        /// Returns an HTTP 404 response if no greeting message is found.
+        /// </returns>
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            _logger.Info($"GetGreetingById called with id: {id}");
+
+            ResponseModel<Greeting?> responseModel = new ResponseModel<Greeting?>();
+
+            var greeting = _greetingBL.GetGreetingById(id);
+
+            if (greeting == null)
+            {
+                responseModel.Success = false;
+                responseModel.Message = "Greeting not found";
+                responseModel.Data = null;
+                _logger.Warn($"Greeting not found for id: {id}");
+                return NotFound(responseModel);
             }
 
-            var greeting = new Greeting { Message = requestModel.Value };
-            var savedGreeting = _greetingBL.AddGreeting(greeting);
-
-
             responseModel.Success = true;
-            responseModel.Message = "Greeting saved successfully.";
-            responseModel.Data = savedGreeting.Message;
-            _logger.Info("SendGreeting Method Executed Successfully");
+            responseModel.Message = "Greeting found successfully.";
+            responseModel.Data = greeting;
+            _logger.Info($"Greeting found: {greeting.Message}");
+
             return Ok(responseModel);
         }
+
+
+
+
 
         /// <summary>
         /// Get a welcome message
