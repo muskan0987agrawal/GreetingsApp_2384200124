@@ -27,18 +27,6 @@ namespace RepositoryLayer.Service
             return greeting;
         }
 
-        //UC5
-        //public Greeting GetGreetingById(int id)
-        //{
-        //    Greeting? greeting = _context.Greetings.FirstOrDefault(x => x.Id == id);
-
-        //    if (greeting == null)
-        //    {
-        //        throw new KeyNotFoundException($"Greeting not found for this id: {id}");
-        //    }
-
-        //    return greeting;
-        //}
 
         //UC5
 
@@ -47,7 +35,11 @@ namespace RepositoryLayer.Service
             return _context.Greetings.FirstOrDefault(x => x.Id == id); 
         }
 
-
+        //UC6
+        public List<Greeting> GetAllGreetings()
+        {
+            return _context.Greetings.ToList(); //Fetch all greetings from DB
+        }
 
     }
 }

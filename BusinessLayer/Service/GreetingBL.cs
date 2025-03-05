@@ -56,6 +56,12 @@ namespace BusinessLayer.Service
             return _greetingRL.GetGreetingById(id);
         }
 
+        //uc6
+        public List<Greeting> GetAllGreetings()
+        {
+            return _greetingRL.GetAllGreetings(); // ✅ Returns list from RL
+        }
+
 
     }
 }

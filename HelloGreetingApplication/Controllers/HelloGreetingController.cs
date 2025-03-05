@@ -128,8 +128,28 @@ namespace HelloGreetingApplication.Controllers
             return Ok(responseModel);
         }
 
+        //UC6
 
+        /// <summary>
+        /// Retrieves a list of all greeting messages.
+        /// </summary>
+        /// <returns>A list of all stored greetings.</returns>
+        [HttpGet("All")]
+        public IActionResult GetAllGreetings()
+        {
+            _logger.Info("GetAllGreetings method called.");
 
+            var greetings = _greetingBL.GetAllGreetings();
+
+            if (greetings == null || greetings.Count == 0)
+            {
+                _logger.Warn("No greetings found in the database.");
+                return NotFound(new { Success = false, Message = "No greetings found." });
+            }
+
+            _logger.Info("All greetings retrieved successfully.");
+            return Ok(new { Success = true, Data = greetings });
+        }
 
 
         /// <summary>

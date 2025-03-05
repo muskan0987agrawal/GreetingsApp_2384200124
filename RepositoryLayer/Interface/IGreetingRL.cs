@@ -13,5 +13,6 @@ namespace RepositoryLayer.Interface
     {
         Greeting AddGreetings(Greeting greeting);
         Greeting GetGreetingById(int id);
+        List<Greeting> GetAllGreetings();
     }
 }
