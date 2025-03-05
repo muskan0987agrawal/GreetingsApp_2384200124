@@ -12,10 +12,12 @@ namespace BusinessLayer.Interface
     {
         string getGreetMessage();
         string GetGreetingMessage(UsernameRequestModel request);
-        Greeting AddGreeting(Greeting greeting);
+        GreetingEntity AddGreeting(GreetingEntity greeting);
 
-        Greeting? GetGreetingById(int id);
+        GreetingEntity? GetGreetingById(int id);
 
-        List<Greeting> GetAllGreetings();
+        List<GreetingEntity> GetAllGreetings();
+
+        GreetingEntity UpdateGreeting(int id, string NewMssge);
     }
 }

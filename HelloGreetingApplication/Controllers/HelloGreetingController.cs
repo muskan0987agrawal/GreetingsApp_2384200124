@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
 using NLog;
 using RepositoryLayer.Entity;
+using RepositoryLayer.Interface;
 using RepositoryLayer.Service;
+using Swashbuckle.Swagger;
 
 namespace HelloGreetingApplication.Controllers
 {
@@ -24,6 +26,7 @@ namespace HelloGreetingApplication.Controllers
             _greetingBL = greetingBL;
         }
 
+        //UC2
         /// <summary>
         /// Get greeting message
         /// </summary>
@@ -34,6 +37,7 @@ namespace HelloGreetingApplication.Controllers
             return _greetingBL.getGreetMessage();
         }
 
+        //UC3
         /// <summary>
         /// Creates a personalized greeting based on provided user attributes
         /// </summary>
@@ -53,13 +57,14 @@ namespace HelloGreetingApplication.Controllers
             return Ok(response);
         }
 
+        //UC4
         /// <summary>
         /// Handles the creation of a new greeting message.
         /// </summary>
         /// <param name="requestModel">The request containing the greeting message.</param>
         /// <returns>Returns a success response if the greeting is saved, or an error response if the input is invalid.</returns>
         [HttpPost("UC4")]
-        public IActionResult SendGreeting(PostGreetingRequest postgreetingrequest)
+        public IActionResult SendGreeting(RequestGreetingModel postgreetingrequest)
         {
             _logger.Info("SendGreeting method started."); // Method start log
 
@@ -73,7 +78,7 @@ namespace HelloGreetingApplication.Controllers
                     return BadRequest(new { Success = false, Message = "Invalid input. Message cannot be empty." });
                 }
 
-                var greeting = new Greeting { Message = postgreetingrequest.Message };
+                var greeting = new GreetingEntity { Message = postgreetingrequest.Message };
                 var savedGreeting = _greetingBL.AddGreeting(greeting);
 
                 responseModel.Success = true;
@@ -107,7 +112,7 @@ namespace HelloGreetingApplication.Controllers
         {
             _logger.Info($"GetGreetingById called with id: {id}");
 
-            ResponseModel<Greeting?> responseModel = new ResponseModel<Greeting?>();
+            ResponseModel<GreetingEntity?> responseModel = new ResponseModel<GreetingEntity?>();
 
             var greeting = _greetingBL.GetGreetingById(id);
 
@@ -151,7 +156,40 @@ namespace HelloGreetingApplication.Controllers
             return Ok(new { Success = true, Data = greetings });
         }
 
+        //UC7
+        /// <summary>
+        /// Edit a greeting meaasge 
+        /// </summary>
+        /// <returns> returns a updated greeting message</returns>
+      
+        [HttpPatch("{id}")]
+        public IActionResult PatchGreeting(int id, RequestGreetingModel updatedGreeting)
+        {
+            _logger.Info($"UpdateGreeting method called with id: {id}");
+            try
+            {
+                var greeting = _greetingBL.UpdateGreeting(id, updatedGreeting.Message);
+                if (greeting == null)
+                {
+                    _logger.Info("Greeting update failed: ID not found.");
+                    return NotFound(new { Success = false, Message = "Greeting not found." });
+                }
+                _logger.Info("Greeting updated successfully.");
+                return Ok(new { Success = true, Data = greeting.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.Error($"An error occurred while fetching greeting for id: {id}. Error: {ex.Message}");
+                return StatusCode(500, new { Success = false, Message = "An unexpected error occurred." });
+            }
 
+          
+        }
+
+      
+
+
+        //UC1
         /// <summary>
         /// Get a welcome message
         /// </summary>
@@ -184,6 +222,8 @@ namespace HelloGreetingApplication.Controllers
             return Ok(responseModel);
         }
 
+
+     
         /// <summary>
         /// Update greeting message
         /// </summary>

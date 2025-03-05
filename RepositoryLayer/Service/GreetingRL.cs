@@ -20,7 +20,7 @@ namespace RepositoryLayer.Service
 
         }
         //UC4
-        public Greeting AddGreetings(Greeting greeting)
+        public GreetingEntity AddGreetings(GreetingEntity greeting)
         {
             _context.Greetings.Add(greeting);
             _context.SaveChanges();
@@ -30,15 +30,32 @@ namespace RepositoryLayer.Service
 
         //UC5
 
-        public Greeting? GetGreetingById(int id) 
+        public GreetingEntity? GetGreetingById(int id) 
         {
             return _context.Greetings.FirstOrDefault(x => x.Id == id); 
         }
 
         //UC6
-        public List<Greeting> GetAllGreetings()
+        public List<GreetingEntity> GetAllGreetings()
         {
             return _context.Greetings.ToList(); //Fetch all greetings from DB
+        }
+
+        //UC7
+        public GreetingEntity UpdateGreeting(int id, string newMssge)
+        {
+            var existingGreeting = _context.Greetings.FirstOrDefault(x => x.Id == id);
+
+            if (existingGreeting == null)
+            {
+                return existingGreeting; //  Greeting not found
+            }
+
+            existingGreeting.Message = newMssge; // Update message
+            _context.Greetings.Update(existingGreeting);
+            _context.SaveChanges(); // Save changes to DB
+
+            return existingGreeting; // Successfully updated
         }
 
     }

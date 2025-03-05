@@ -45,21 +45,27 @@ namespace BusinessLayer.Service
         }
 
         //UC4
-        public Greeting AddGreeting(Greeting greeting)
+        public GreetingEntity AddGreeting(GreetingEntity greeting)
         {
             return _greetingRL.AddGreetings(greeting);
         }
 
         //UC5
-        public Greeting? GetGreetingById(int id)
+        public GreetingEntity? GetGreetingById(int id)
         {
             return _greetingRL.GetGreetingById(id);
         }
 
         //uc6
-        public List<Greeting> GetAllGreetings()
+        public List<GreetingEntity> GetAllGreetings()
         {
-            return _greetingRL.GetAllGreetings(); // ✅ Returns list from RL
+            return _greetingRL.GetAllGreetings(); // Returns list from RL
+        }
+
+        //UC7
+        public GreetingEntity UpdateGreeting(int id, string NewMssge)
+        {
+            return _greetingRL.UpdateGreeting(id,NewMssge); // Calls RL method
         }
 
 
