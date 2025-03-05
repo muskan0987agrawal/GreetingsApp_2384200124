@@ -158,7 +158,7 @@ namespace HelloGreetingApplication.Controllers
 
         //UC7
         /// <summary>
-        /// Edit a greeting meaasge 
+        /// Patch a greeting message 
         /// </summary>
         /// <returns> returns a updated greeting message</returns>
       
@@ -186,7 +186,42 @@ namespace HelloGreetingApplication.Controllers
           
         }
 
-      
+        //UC8
+        /// <summary>
+        /// Delete a greeting message
+        /// </summary>
+        /// <param name="id">The unique identifier of the greeting message. </param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        public IActionResult DeleteById(int id)
+        {
+            try
+            {
+                _logger.Info($"DELETE request received: Delete Greeting ID={id}");
+                ResponseModel<GreetingEntity> response = new ResponseModel<GreetingEntity?>();
+                var isDeleted = _greetingBL.DeleteGreeting(id);
+
+                if (!isDeleted)
+                {
+                    response.Success = false;
+                    response.Message = "Greeting not found!";
+                    response.Data = null;
+                    _logger.Info($"Greeting deletion failed: ID={id} not found.");
+                    return NotFound(response);
+                }
+
+                response.Success = true;
+                response.Message = "Greeting deleted successfully!";
+                response.Data = null;
+                _logger.Info($"Greeting with ID={id} deleted successfully.");
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error occurred while deleting the greeting.");
+                return StatusCode(500, "Internal server error");
+            }
+        }
 
 
         //UC1

@@ -58,5 +58,20 @@ namespace RepositoryLayer.Service
             return existingGreeting; // Successfully updated
         }
 
+        //UC8
+        public bool DeleteGreeting(int id)
+        {
+            var existingGreeting = _context.Greetings.FirstOrDefault(x => x.Id == id);
+
+            if (existingGreeting == null)
+            {
+                return false; //  id not found
+            }
+
+            _context.Greetings.Remove(existingGreeting);
+            _context.SaveChanges(); // Save changes to DB
+
+            return true;
+        }
     }
 }

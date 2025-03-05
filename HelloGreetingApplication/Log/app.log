@@ -313,3 +313,28 @@ WHERE [u].[Email] = @__userDTO_Email_0
 2025-03-04 15:13:19.9796 | Info | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication) in 94.3683ms 
 2025-03-04 15:13:19.9796 | Info | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostUserName (HelloGreetingApplication)' 
 2025-03-04 15:13:19.9796 | Info | Request finished HTTP/2 POST https://localhost:7240/HelloGreeting/GetUserName application/json 51 - 200 - text/plain;+charset=utf-8 170.4183ms 
+2025-03-05 14:40:36.1672 | Info | Application is starting... 
+2025-03-05 14:41:02.6913 | Info | Application is starting... 
+2025-03-05 14:41:03.7686 | Info | Now listening on: https://localhost:7240 
+2025-03-05 14:41:03.7767 | Info | Now listening on: http://localhost:5084 
+2025-03-05 14:41:03.8389 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-05 14:41:03.8389 | Info | Hosting environment: Development 
+2025-03-05 14:41:03.8389 | Info | Content root path: M:\GreetingApp\HelloGreetingApplication\HelloGreetingApplication\ 
+2025-03-05 14:41:04.4574 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/index.html - - 
+2025-03-05 14:41:04.9618 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/index.html - - - 200 - text/html;charset=utf-8 507.4034ms 
+2025-03-05 14:41:04.9961 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/index.js - - 
+2025-03-05 14:41:04.9961 | Info | Request starting HTTP/2 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-05 14:41:04.9961 | Info | Request starting HTTP/2 GET https://localhost:7240/_vs/browserLink - - 
+2025-03-05 14:41:04.9961 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 1.9785ms 
+2025-03-05 14:41:04.9961 | Info | Request finished HTTP/2 GET https://localhost:7240/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 6.2810ms 
+2025-03-05 14:41:05.0500 | Info | Request finished HTTP/2 GET https://localhost:7240/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.7950ms 
+2025-03-05 14:41:05.1157 | Info | Request starting HTTP/2 GET https://localhost:7240/Swagger/v1/swagger.json - - 
+2025-03-05 14:41:05.1640 | Info | Request finished HTTP/2 GET https://localhost:7240/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 48.3265ms 
+2025-03-05 14:41:20.8504 | Info | Request starting HTTP/2 DELETE https://localhost:7240/HelloGreeting/GreetDelete application/json 42 
+2025-03-05 14:41:20.8631 | Info | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Delete (HelloGreetingApplication)' 
+2025-03-05 14:41:20.8960 | Info | Route matched with {action = "Delete", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(ModelLayer.Model.RequestModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-05 14:41:21.9662 | Info | DELETE /GreetDelete method executed 
+2025-03-05 14:41:21.9662 | Info | Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-05 14:41:21.9810 | Info | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.Delete (HelloGreetingApplication) in 1080.9224ms 
+2025-03-05 14:41:21.9810 | Info | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.Delete (HelloGreetingApplication)' 
+2025-03-05 14:41:21.9810 | Info | Request finished HTTP/2 DELETE https://localhost:7240/HelloGreeting/GreetDelete application/json 42 - 200 - application/json;+charset=utf-8 1134.3603ms 

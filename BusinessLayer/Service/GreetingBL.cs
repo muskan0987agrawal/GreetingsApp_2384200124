@@ -68,6 +68,11 @@ namespace BusinessLayer.Service
             return _greetingRL.UpdateGreeting(id,NewMssge); // Calls RL method
         }
 
+        //UC8
+        public bool DeleteGreeting(int id)
+        {
+            return _greetingRL.DeleteGreeting(id);
+        }
 
     }
 }
