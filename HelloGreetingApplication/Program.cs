@@ -7,10 +7,13 @@ using RepositoryLayer.Interface;
 using Microsoft.EntityFrameworkCore;
 using RepositoryLayer.Context;
 
+
 var logger = LogManager.Setup().LoadConfigurationFromFile("NLog.config").GetCurrentClassLogger();
 
 try
 {
+   
+
     logger.Info("Application is starting...");
 
     var builder = WebApplication.CreateBuilder(args);
@@ -29,11 +32,22 @@ try
 
     var connectionString = builder.Configuration.GetConnectionString("sqlConnection");
     builder.Services.AddDbContext<GreetingDbContext>(options => options.UseSqlServer(connectionString));
+   
     // Swagger Configuration
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+    
+    // Swagger Configuration with XML Comments
+    builder.Services.AddSwaggerGen(c =>
+    {
+        var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+        var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+        c.IncludeXmlComments(xmlPath);
+    });
 
     var app = builder.Build();
+
+ 
 
     // Configure the HTTP request pipeline
     if (app.Environment.IsDevelopment())

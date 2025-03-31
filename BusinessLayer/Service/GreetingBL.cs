@@ -29,19 +29,25 @@ namespace BusinessLayer.Service
         //UC3
         public string GetGreetingMessage(UsernameRequestModel request)
         {
+            //Both first Name and LAstName provided
             if (!string.IsNullOrWhiteSpace(request.FirstName) && !string.IsNullOrWhiteSpace(request.LastName))
             {
                 return $"Hello, {request.FirstName} {request.LastName}!";
             }
+            //only first /name provided
             else if (!string.IsNullOrWhiteSpace(request.FirstName))
             {
                 return $"Hello, {request.FirstName}!";
             }
+            //only last name provided
             else if (!string.IsNullOrWhiteSpace(request.LastName))
             {
                 return $"Hello, {request.LastName}!";
             }
+
+            //No name provided
             return "Hello World!";
+
         }
 
         //UC4
